@@ -18,7 +18,7 @@ const CustomTransactionsFeed = ({
       </div>
 
       <div className="trans-seperate col-2">
-        <span className="trans-amount">{amount}</span>
+        <span className="trans-amount">${amount}</span>
         <div className="time-stamp">
           <span className="trans-date">{date} </span>
           <span className="trans-time">{time}</span>

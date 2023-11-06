@@ -15,7 +15,7 @@
 
 .trans-data {
   display: flex;
-  margin-bottom: 6px;
+  margin-bottom: 1px;
   align-items: center;
   justify-content: space-around;
 }
