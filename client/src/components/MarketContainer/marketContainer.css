@@ -1,0 +1,74 @@
+.market-container {
+  position: relative;
+  width: 520px;
+  height: 210px;
+  margin-top: 30px;
+  margin-left: 275px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.market-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.market-header {
+  font-family: "Poppins", sans-serif;
+  padding-top: 15px;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.market-data {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.market-icons {
+  margin-left: 12px;
+  margin-top: -10px;
+  padding-right: 35px;
+}
+
+.market-seperate {
+  display: flex;
+  flex-direction: column;
+  padding-right: 45px;
+  padding-bottom: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.market-title {
+  font-weight: bolder;
+}
+
+.market-info {
+  top: 62px;
+  color: #908e8e;
+  font-size: 10px;
+}
+
+.market-name {
+  padding-bottom: 2px;
+  font-size: 9px;
+  color: #908e8e;
+}
+
+.market-col {
+  padding-bottom: 2px;
+  font-size: 9px;
+  color: #908e8e;
+}
+
+.market-price {
+  font-weight: bolder;
+}
+
+.market-graph {
+  margin-left: auto;
+  margin-top: -10px;
+}

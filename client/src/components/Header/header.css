@@ -1,0 +1,51 @@
+.header-container {
+  position: absolute;
+  height: 55px;
+  width: 80%;
+  top: 10px;
+  margin-left: 20%;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.banner {
+  display: flex;
+  margin-left: 70%;
+}
+
+.banner-icons {
+  display: flex;
+  margin-left: -90px;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.user-info {
+  display: flex;
+  margin-left: 50px;
+}
+
+.user-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.user-contact {
+  color: #828282;
+}
+
+.down-arrow {
+  margin-top: 15px;
+  margin-left: 20px;
+}

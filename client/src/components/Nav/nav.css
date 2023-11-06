@@ -1,0 +1,32 @@
+.nav-bar {
+  position: relative;
+  display: flex;
+  width: 20%;
+  height: 100%;
+  background-color: #f3f3f3;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.dash-header {
+  display: flex;
+  width: 20%;
+  height: 10px;
+}
+
+.logo {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.title {
+  margin: 20px;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 78px;
+  margin-top: 25px;
+}
