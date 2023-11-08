@@ -28,3 +28,25 @@
   gap: 30px;
   margin-top: 30px;
 }
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    overflow: scroll;
+  }
+
+  .dashboard-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .first-content,
+  .second-content {
+    flex-direction: column;
+  }
+
+  .dashboard-container {
+    overflow: scroll;
+  }
+}

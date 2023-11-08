@@ -6,24 +6,35 @@ import QuestionIcon from "../Icons/QuestionIcon";
 import img from "../../assets/img.jpg";
 import DownArrowIcon from "../Icons/DownArrowIcon";
 
+/**
+ * Header component represents the top section of the application, containing search bar, user information, and icons.
+ *
+ * @returns {ReactElement} Header component with search bar, user information, and icons.
+ */
 const Header = () => {
   return (
     <div className="header-container">
+      {/* Search bar component */}
       <SearchBar />
       <div className="banner">
+        {/* Icons for notifications and help */}
         <span className="banner-icons">
-          <BellIcon />
-          <QuestionIcon />
+          <BellIcon /> {/* Bell icon for notifications */}
+          <QuestionIcon /> {/* Question mark icon for help */}
         </span>
+        {/* User information section */}
         <span className="user-info">
+          {/* User profile image */}
           <img src={img} className="user-img" alt="User profile" />
 
+          {/* User details including name, username, and down arrow icon */}
           <p className="details">
-            <strong>Jack Reacher</strong>
-            <span className="user-contact">@jack123</span>
+            <strong>Jack Reacher</strong> {/* User's full name */}
+            <span className="user-contact">@jack123</span>{" "}
+            {/* User's username */}
           </p>
           <span className="down-arrow">
-            <DownArrowIcon />
+            <DownArrowIcon /> {/* Down arrow icon for dropdown menu */}
           </span>
         </span>
       </div>

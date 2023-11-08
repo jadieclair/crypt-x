@@ -30,3 +30,40 @@
   margin-left: 78px;
   margin-top: 25px;
 }
+
+@media (max-width: 768px) {
+  .nav-bar {
+    width: 20%;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .logo {
+    margin-left: 25px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .title {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-bar {
+    width: 15%;
+    background-color: white;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 15px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}

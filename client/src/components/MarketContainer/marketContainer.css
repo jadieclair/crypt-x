@@ -72,3 +72,31 @@
   margin-left: auto;
   margin-top: -10px;
 }
+
+@media (max-width: 768px) {
+  .market-container {
+    width: 500px;
+    height: 230px;
+    margin-top: 25px;
+    margin-left: 160px;
+  }
+
+  .market-icons {
+    margin-top: -8px;
+    padding-right: 20px;
+  }
+
+  .market-seperate {
+    padding-right: 40px;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .market-container {
+    width: 520px;
+    height: 210px;
+    margin-top: 290px;
+    margin-left: 15px;
+  }
+}
