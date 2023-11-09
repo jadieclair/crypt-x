@@ -49,3 +49,46 @@
   left: 45px;
   color: #9e9e9e;
 }
+
+@media (max-width: 768px) {
+  .prices-container {
+    width: 495px;
+    height: 458px;
+    margin-top: -445px;
+    margin-left: 160px;
+  }
+
+  .months {
+    top: 385px;
+  }
+
+  .y-axis {
+    top: 375px;
+  }
+}
+
+@media (max-width: 320px) {
+  .prices-container {
+    width: 290px;
+    height: 258px;
+    margin-left: 8px;
+  }
+
+  .price-header {
+    font-size: 12px;
+    display: flex;
+    width: auto;
+  }
+
+  .y-axis {
+    top: 185px;
+    left: 25px;
+  }
+
+  .months {
+    top: 185px;
+    gap: 15px;
+    font-size: 10px;
+    left: -40px;
+  }
+}

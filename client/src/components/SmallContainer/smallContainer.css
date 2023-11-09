@@ -35,7 +35,7 @@
   font-family: "Poppins", sans-serif;
   padding-top: 10px;
   margin-top: 50px;
-  margin-left: -145px;
+  margin-left: -135px;
 }
 
 .small-container .name {
@@ -45,5 +45,28 @@
   font-weight: lighter;
   gap: 30px;
   margin-top: 90px;
-  margin-left: -60px;
+  margin-left: -35px;
+}
+
+.green {
+  color: #1ecb4f;
+}
+
+.red {
+  color: #ff8d4d;
+}
+
+@media (max-width: 768px) {
+  .small-container {
+    height: 115px;
+    width: 160px;
+    top: -470px;
+    left: 165px;
+  }
+}
+
+@media (max-width: 320px) {
+  .small-container {
+    left: 70px;
+  }
 }

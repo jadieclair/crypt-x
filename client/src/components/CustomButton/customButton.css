@@ -35,3 +35,20 @@
 .nav-tab:hover::before {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .nav-tab {
+    font-size: 10px;
+  }
+
+  .nav-tab::before {
+    left: auto;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-tab {
+    display: none;
+  }
+}

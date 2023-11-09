@@ -49,3 +49,43 @@
   margin-top: 15px;
   margin-left: 20px;
 }
+
+@media (max-width: 768px) {
+  .banner-icons {
+    margin-left: -110px;
+    gap: 10px;
+  }
+
+  .user-img {
+    margin-left: 10px;
+  }
+  .down-arrow {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner-icons {
+    display: none;
+  }
+
+  .user-img {
+    display: none;
+  }
+
+  .user-contact {
+    display: none;
+  }
+
+  .down-arrow {
+    display: none;
+  }
+
+  .details {
+    display: none;
+  }
+
+  .header-container {
+    border-bottom: none;
+  }
+}

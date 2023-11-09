@@ -16,7 +16,7 @@ const MarketBitcoin = () => {
           r="24"
           fill="white"
           stroke="#E4E4E4"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M27.97 25.75H27.2H22.53V28.58H23.84H27.97C28.92 28.58 29.7 27.94 29.7 27.16C29.7 26.38 28.92 25.75 27.97 25.75Z"
