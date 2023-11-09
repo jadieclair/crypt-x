@@ -10,8 +10,8 @@ import EthereumGraph from "../Icons/EthereumGraph";
 import BitcoinGraph from "../Icons/BitcoinGraph";
 import LitecoinGraph from "../Icons/LitecoinGraph"; // Import LitecoinGraph
 import CardanoGraph from "../Icons/CardanoGraph"; // Import CardanoGraph
-import StatsIncreaseIcon from "../Icons/StatsIncreaseIcon";
-import StatsDecreaseIcon from "../Icons/StatsDecreaseIcon";
+import SmallUpArrow from "../Icons/SmallUpArrow";
+import SmallDownArrow from "../Icons/SmallDownArrow";
 
 const MarketContainer = () => {
   const [marketData, setMarketData] = useState([]);
@@ -44,17 +44,16 @@ const MarketContainer = () => {
       <h4 className="market-header">Live Market</h4>
 
       {marketData.map((item, index) => {
-        // Determine the text color based on the price change
-        let textColor = "black";
-        if (item.price_change_percentage_24h < -1) {
-          textColor = "orange";
-        } else if (item.price_change_percentage_24h > 1) {
-          textColor = "green";
-        }
+        // Determine arrow icon based on positive or negative growth
+        const isPositiveGrowth = parseFloat(item.price_change_percentage_24h) > 2;
+        const arrowIcon = isPositiveGrowth ? <SmallUpArrow /> : <SmallDownArrow />;
+
+        // Apply green or orange color class based on positive or negative growth
+        const colorClass = isPositiveGrowth ? "green" : "orange";
 
         // Determine if the price change is an increase or decrease
-        const isIncrease = item.price_change_percentage_24h > 0;
-        const isDecrease = item.price_change_percentage_24h < 0;
+        const isIncrease = item.price_change_percentage_24h > 2;
+        const isDecrease = item.price_change_percentage_24h < -2;
 
         return (
           <CustomMarketFeed
@@ -79,10 +78,11 @@ const MarketContainer = () => {
               item.name === "Cardano" ? <CardanoGraph /> :
               <div>Custom Graph</div>
             }
-            textColor={textColor}
+            textColor={colorClass}
           >
-            {isIncrease && <StatsIncreaseIcon />}
-            {isDecrease && <StatsDecreaseIcon />}
+            {arrowIcon}
+            {isIncrease && <div>Price Increased</div>}
+            {isDecrease && <div>Price Decreased</div>}
           </CustomMarketFeed>
         );
       })}

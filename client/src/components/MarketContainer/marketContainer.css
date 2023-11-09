@@ -73,16 +73,6 @@
   margin-top: -10px;
 }
 
-<<<<<<< HEAD
-/* marketContainer.css */
-
-.green {
-  color: #1ecb4f;
-}
-
-.orange {
-  color: #ff8d4d;
-=======
 @media (max-width: 768px) {
   .market-container {
     width: 500px;
@@ -109,5 +99,5 @@
     margin-top: 290px;
     margin-left: 15px;
   }
->>>>>>> 1e990be815df4f76213678d3718e5356a9fcd245
 }
+
