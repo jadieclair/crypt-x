@@ -1,120 +1,85 @@
-/* form.css */
+h2{
+  font-size: 50px;
+}
 
-/* Container for the entire form */
+p{
+font-size: 22px;
+}
+
 .container {
-    margin-top: 90px;
-      display: flex;
-      max-height: 700px;
-      max-width: 1200px; /* Adjust the max width as needed */
-      margin: 0 auto;
-      background-color: rgb(0, 0, 0);
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000; /* Black background */
+  color: #fff;
+}
+
+.form-content {
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  padding: 20px;
+  background-color: #000; /* Black background */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.input-container {
+  margin-left: 60px;
+  margin-right: 70px;
+  margin-bottom: 20px;
+}
+
+input {
+  font-size: 24px;
+  width: 300px;
+  padding: 10px;
+  border: none;
+  background-color: #ffffff; /* Dark blue background */
+  color: #4e4e4e;
+  border-radius: 5px;
+}
+
+button {
+font-size: 23px;
+  width: 200px;
+  height: 50px;
+  margin-left: 80px;
+  padding: 10px;
+  background-color: #0074cc; /* Bright blue button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00579b; /* Darker blue on hover */
+}
+
+.error {
+  color: #ff6347; /* Red for error messages */
+  margin-top: 5px;
+}
+
+.image-container {
+  flex: 1;
+ padding-left: 60px;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+  /* Links */
+  span {
     
-    /* Form content */
-    .form-content {
-      flex: 1;
-      padding: 20px;
-    }
-    
-    /* Form heading */
-    h2 {
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      font-weight: 700;
-      font-size: 36px;
-      text-align: center;
-      color: #ffffff;
-    }
-    
-    /* Input fields */
-    .input-container {
-      margin: 15px 0;
-    }
-    
-    input {
-      width: 350px;
-      padding: 25px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 26px;
-      font-family: Poppins, sans-serif;
-    }
-    
-    /* Error messages */
-    .error {
-      color: #f44336;
-      font-size: 18px;
-    }
-    
-    /* Buttons */
-    button {
-      width: 390px;
-      margin-top: 0px; /* Adjust the margin as needed */
-      padding: 10px;
-      background-color: #1b3fcf;
-      color: rgb(255, 255, 255);
-      border: none;
-      border-radius: 19px;
-      cursor: pointer;
-      font-size: 26px;
-    }
-    
-    button:hover {
-      background-color: #1641ff;
-    }
-    
-    /* Links */
-    span {
-      font-size: 24px;
-      text-decoration: underline;
-      cursor: pointer;
-      color: #1e90ff;
-    }
-    
-    /* Image container styles */
-    .image-container {
-      flex: 1;
-    
-      background-size: cover;
-      background-position: center;
-      height: 100vh; /* Set the height of the image container */
-    }
-    
-    /* Additional styling for the image (if needed) */
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    img{
-      margin-top: 90px;
-      width: 950px;
-      
-    
-    }
-    
-    /* Responsiveness for smaller screens */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-    
-      .form-content {
-        width: 100%;
-      }
-    
-      .image-container {
-        height: 800px; /* Adjust the height for smaller screens */
-      }
-    }
-    
-    p{
-    color: #ffffff;
-    padding: -50px;
-    font-size: 23px;
-    }
-    
-    body{
-      background-color: #1b3fcf;
-    }
+    text-decoration: underline;
+    cursor: pointer;
+    color: #1e90ff;
+  }
+
+  

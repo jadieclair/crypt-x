@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "./nav.css";
 import LogoImg from "../Icons/LogoImg";
 import CustomButton from "../CustomButton/CustomButton";
@@ -11,6 +12,12 @@ import SettingsIcon from "../Icons/SettingsIcon";
 import LogoutIcon from "../Icons/LogoutIcon";
 
 const Nav = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/authenticate');
+  };
+
   return (
     <div className="nav-bar">
       <div className="dash-header">
@@ -25,7 +32,9 @@ const Nav = () => {
         <CustomButton svgIcon={<WalletIcon />} name="Wallet" />
         <CustomButton svgIcon={<MailIcon />} name="Mail Box" />
         <CustomButton svgIcon={<SettingsIcon />} name="Settings" />
-        <CustomButton svgIcon={<LogoutIcon />} name="Logout" />
+        <a href="/authenticate">
+          <CustomButton svgIcon={<LogoutIcon />} name="Logout" onClick={handleLogout} />
+        </a>
       </ul>
     </div>
   );
