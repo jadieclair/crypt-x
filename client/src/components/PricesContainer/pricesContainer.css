@@ -1,7 +1,7 @@
 .prices-container {
   position: relative;
   display: flex;
-  width: 495px;
+  width: 595px;
   height: 258px;
   margin-top: -780px;
   margin-left: 660px;
@@ -18,7 +18,7 @@
 .price-header {
   font-family: "Poppins", sans-serif;
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 5px;
   font-size: 14px;
 }
 

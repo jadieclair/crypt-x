@@ -1,12 +1,17 @@
+/* marketContainer.css */
+
 .market-container {
   position: relative;
   width: 520px;
   height: 210px;
   margin-top: 30px;
+  margin-bottom: 9px;
   margin-left: 275px;
   border-radius: 20px;
   transition: all 0.3s ease;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .market-container:hover {
@@ -16,30 +21,36 @@
 
 .market-header {
   font-family: "Poppins", sans-serif;
-  padding-top: 15px;
-  margin-left: 15px;
-  font-size: 14px;
+  padding: 15px;
+  font-size: 15px;
+  margin-top: -9px;
 }
 
 .market-data {
+  margin-top: -9px;
   display: flex;
-  margin-bottom: 6px;
+  gap:12px;
+  align-items: center;
+  
 }
+
+
 
 .market-icons {
+  padding-bottom: 25px;
   margin-left: 12px;
   margin-top: -10px;
-  padding-right: 35px;
+  padding-right: 10px;
+  
 }
 
-.market-seperate {
+.market-separate {
   display: flex;
   flex-direction: column;
-  padding-right: 45px;
-  padding-bottom: 5px;
+  padding-right: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
-  margin-top: -10px;
+  margin-top: -29px;
 }
 
 .market-title {
@@ -47,17 +58,13 @@
 }
 
 .market-info {
-  top: 62px;
+  margin-left: 7px;
+  margin-top: 2px;
   color: #908e8e;
   font-size: 10px;
 }
 
-.market-name {
-  padding-bottom: 2px;
-  font-size: 9px;
-  color: #908e8e;
-}
-
+.market-name,
 .market-col {
   padding-bottom: 2px;
   font-size: 9px;
@@ -68,9 +75,23 @@
   font-weight: bolder;
 }
 
+.market-change-container {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.market-change {
+  margin-right: 2px;
+}
+
 .market-graph {
   margin-left: auto;
   margin-top: -10px;
+}
+
+.market-growth {
+  margin-top: -5px;
 }
 
 @media (max-width: 768px) {
@@ -83,21 +104,46 @@
 
   .market-icons {
     margin-top: -8px;
-    padding-right: 20px;
+    padding-right: 10px;
   }
 
-  .market-seperate {
-    padding-right: 40px;
-    padding-bottom: 5px;
+  .market-separate {
+    padding-right: 10px;
   }
 }
 
 @media (max-width: 320px) {
   .market-container {
-    width: 520px;
+    width: 320px;
     height: 210px;
     margin-top: 290px;
     margin-left: 15px;
   }
 }
 
+.green {
+  color: #1ecb4f;
+}
+
+.red {
+  color: #ff8d4d;
+}
+
+/* market arrrowa when change has occured */
+
+.market-change-container {
+  display: flex;
+  align-items: center;
+}
+
+.market-change {
+  margin-right: 9px; /* Adjust the margin as needed */
+}
+
+.green {
+  color: #1ecb4f;
+}
+
+.red {
+  color: #ff8d4d;
+}
