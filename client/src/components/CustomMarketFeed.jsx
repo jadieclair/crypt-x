@@ -1,8 +1,3 @@
-// CustomMarketFeed.js
-import React from "react";
-import SmallUpArrow from "./Icons/SmallUpArrow";
-import SmallDownArrow from "./Icons/SmallDownArrow";
-
 const CustomMarketFeed = ({
   svgIcon,
   title,
@@ -13,6 +8,10 @@ const CustomMarketFeed = ({
   price,
   graph,
 }) => {
+  function formatNumberWithComma(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   // Check if 'change' is a valid number
   const isValidChange = !isNaN(parseFloat(change));
 
@@ -27,7 +26,7 @@ const CustomMarketFeed = ({
       <div className="market-separate">
         {/* Display the title and information */}
         <span className="market-title">{title}</span>
-        <span className="market-info">{info}</span>
+        <span className="market-info">{info.toUpperCase()}</span>
       </div>
 
       <div className="market-separate">
@@ -36,18 +35,24 @@ const CustomMarketFeed = ({
 
         <div className="market-change-container">
           {/* Display the change value and arrow icon based on positive/negative change */}
-          <span className={`market-change ${isPositiveChange ? 'green' : 'red'}`}>
-            {isValidChange ? change : "N/A"} {/* Display "N/A" if 'change' is not a valid number */}
+          <span
+            className={`market-change ${isPositiveChange ? "green" : "red"}`}
+          >
+            {isValidChange ? change : "N/A"}{" "}
+            {/* Display "N/A" if 'change' is not a valid number */}
           </span>
-
-          {isPositiveChange ? <SmallUpArrow className="green" /> : <SmallDownArrow className="red" />}
         </div>
       </div>
 
       <div className="market-separate">
         {/* Display additional information (col) and the price */}
-        <span className="market-col">{col}</span>
-        <span className="market-price"> ${isValidChange ? price : "N/A"}</span> {/* Display "N/A" if 'price' is not a valid number */}
+        <div className="market-col">{col}</div>
+        <div className="market-price">
+          {isValidChange
+            ? formatNumberWithComma(Math.floor(price)) + " USD"
+            : "N/A"}
+        </div>{" "}
+        {/* Display "N/A" if 'price' is not a valid number */}
       </div>
 
       <span className="market-graph">{graph}</span>

@@ -13,7 +13,7 @@ function App() {
           {/* Add a route for successful registration redirection */}
           <Route
             path="/registration-success"
-            element={<Navigate to="/home"/>}
+            element={<Navigate to="/home" />}
           />
         </Routes>
       </BrowserRouter>

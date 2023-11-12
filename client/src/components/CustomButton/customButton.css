@@ -18,12 +18,18 @@
   left: 170px;
   opacity: 0;
   transition: opacity 0.5s;
+  text-decoration: none;
+}
+
+.list-name {
+  text-decoration: none;
 }
 
 .ul-list {
   display: flex;
   gap: 15px;
   margin-bottom: 10px;
+  color: #9e9e9e;
 }
 
 .ul-list:hover,

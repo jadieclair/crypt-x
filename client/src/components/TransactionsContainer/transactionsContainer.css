@@ -27,13 +27,7 @@
   padding-right: 40px;
 }
 
-.trans-seperate {
-  display: flex;
-  flex-direction: column;
-}
-
 .col-2 {
-  margin-left: 120px;
   margin-left: auto;
   padding-right: 15px;
 }
@@ -60,20 +54,20 @@
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: bolder;
-  margin-left: -97px;
+  margin-right: -8px;
 }
 
 .trans-date {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   color: #9e9e9e;
-  margin-left: -97px;
 }
 
 .trans-time {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   color: #9e9e9e;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
@@ -86,14 +80,14 @@
   }
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .transactions-container {
     width: 325px;
     height: 210px;
     margin-top: -225px;
     margin-left: 30px;
   }
-}
+} */
 
 @media (max-width: 320px) {
   .transactions-container {
@@ -106,6 +100,7 @@
   .col-2 {
     margin-left: auto;
     padding-right: -10px;
+    margin-bottom: -2px;
   }
 
   .trans-amount,

@@ -12,13 +12,13 @@ const PricesContainer = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart",
-          {
-            params: {
-              vs_currency: "usd",
-              days: "180",
-            },
-          }
+          "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=180"
+          // {
+          //   params: {
+          //     vs_currency: "usd",
+          //     days: "180",
+          //   },
+          // }
         );
 
         const pricesData = response.data.prices;
@@ -63,7 +63,7 @@ const PricesContainer = () => {
             label: "BTC Prices",
             data: prices.map((entry) => entry.price.toFixed(2)),
             fill: false,
-            borderColor: "rgb(75, 192, 192)",
+            borderColor: " #6154f0",
             tension: 0.1,
           },
         ],
@@ -105,7 +105,7 @@ const PricesContainer = () => {
 
   return (
     <div className="prices-container">
-      <h4 className="price-header">BTC Prices</h4>
+      {/* <h4 className="price-header">BTC Prices</h4> */}
       <canvas ref={chartRef}></canvas>
     </div>
   );

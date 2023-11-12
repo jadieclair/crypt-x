@@ -44,12 +44,16 @@ const SmallContainer = ({ coinData, svgIcon, growth, name, className }) => {
     // Render the small container with cryptocurrency information
     return (
       <div className={`small-container ${className}`}>
-        <span className="svgIcon">{svgIcon}</span>
-        <span className={`growth ${colorClass}`}>
-          {arrowIcon} {growth}
-        </span>
-        <span className="amount">${formattedPrice}</span>
-        <span className="name">{name}</span>
+        <div className="small-div-top">
+          <span className="svgIcon">{svgIcon}</span>
+          <span className={`growth ${colorClass}`}>
+            {arrowIcon} {growth}
+          </span>
+        </div>
+        <div className="small-div-bottom">
+          <div className="amount">${formattedPrice}</div>
+          <div className="name">{name}</div>
+        </div>
       </div>
     );
   } catch (error) {

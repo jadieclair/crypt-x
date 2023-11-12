@@ -29,8 +29,8 @@ const Header = () => {
 
           {/* User details including name, username, and down arrow icon */}
           <p className="details">
-            <strong>Jack Reacher</strong> {/* User's full name */}
-            <span className="user-contact">@jack123</span>{" "}
+            <strong>Laurice</strong> {/* User's full name */}
+            <span className="user-contact">@laurice22</span>{" "}
             {/* User's username */}
           </p>
           <span className="down-arrow">

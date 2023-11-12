@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import '../form.css';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import "./authentication.css";
+import { useNavigate } from "react-router-dom";
 
 const Authentication = () => {
   const navigate = useNavigate();
 
   const [isRegistering, setIsRegistering] = useState(false);
   const [user, setUser] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
   const [errors, setErrors] = useState({});
 
@@ -18,18 +18,18 @@ const Authentication = () => {
     const newErrors = {};
 
     if (!user.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
       isValid = false;
     } else if (!/^\S+@\S+\.\S+$/.test(user.email)) {
-      newErrors.email = 'Invalid email format';
+      newErrors.email = "Invalid email format";
       isValid = false;
     }
 
     if (!user.password) {
-      newErrors.password = 'Password is required';
+      newErrors.password = "Password is required";
       isValid = false;
     } else if (user.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
+      newErrors.password = "Password must be at least 6 characters";
       isValid = false;
     }
 
@@ -46,9 +46,9 @@ const Authentication = () => {
   const handleRegistration = () => {
     if (validateUser()) {
       // Continue with registration logic (replace with your actual logic)
-      console.log('User registered:', user);
+      alert("Registration is Successful");
       // Redirect to the home page upon successful registration
-      navigate('/home');
+      navigate("/home");
     }
   };
 
@@ -58,12 +58,12 @@ const Authentication = () => {
       const userExists = checkIfUserExists(user);
 
       if (userExists) {
-        console.log('User logged in:', user);
+        alert("Login is Successful");
         // Redirect to the home page upon successful login
-        navigate('/home');
+        navigate("/home");
       } else {
         // Display an error message if the user does not exist
-        setErrors({ ...errors, login: 'User does not exist' });
+        setErrors({ ...errors, login: "User does not exist" });
       }
     }
   };
@@ -77,7 +77,7 @@ const Authentication = () => {
   return (
     <div className="container">
       <div className="form-content">
-        <h2>{isRegistering ? 'Register' : 'Login'}</h2>
+        <h2>{isRegistering ? "Register" : "Login"}</h2>
         <div className="input-container">
           <input
             type="text"
@@ -110,17 +110,22 @@ const Authentication = () => {
           {errors.login && <p className="error">{errors.login}</p>}
         </div>
         <button onClick={isRegistering ? handleRegistration : handleLogin}>
-          {isRegistering ? 'Register' : 'Login'}
+          {isRegistering ? "Register" : "Login"}
         </button>
         <p>
-          {isRegistering ? "Already have an account?" : "Don't have an account?"}
-          <span onClick={() => setIsRegistering(!isRegistering)}>
-            {isRegistering ? 'Login' : 'Register'}
+          {isRegistering
+            ? "Already have an account?"
+            : "Don't have an account?"}
+          <span
+            className="reg-btns"
+            onClick={() => setIsRegistering(!isRegistering)}
+          >
+            {isRegistering ? "Login" : "Register"}
           </span>
         </p>
       </div>
       <div className="image-container">
-        <img src='./blue.gif' width='600px' alt='image1' />
+        <img src="./blue.gif" width="600px" alt="image1" />
       </div>
     </div>
   );

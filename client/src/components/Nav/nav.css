@@ -67,3 +67,7 @@
     margin-top: 10px;
   }
 }
+
+.logout-link {
+  text-decoration: none;
+}

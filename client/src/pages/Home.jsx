@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./home.css";
+import "../style.css";
 import Nav from "../components/Nav/Nav";
 import Header from "../components/Header/Header";
 import SmallContainer from "../components/SmallContainer/SmallContainer";
@@ -25,6 +26,7 @@ const Home = () => {
         // Fetch data from the API
         const response = await axios.get(url);
         setCoins(response.data);
+        // console.log(response.data);
       } catch (error) {
         // Handle errors and set the error state
         setError(error);

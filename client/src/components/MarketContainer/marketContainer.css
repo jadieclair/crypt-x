@@ -1,5 +1,3 @@
-/* marketContainer.css */
-
 .market-container {
   position: relative;
   width: 520px;
@@ -29,19 +27,15 @@
 .market-data {
   margin-top: -9px;
   display: flex;
-  gap:12px;
+  gap: 25px;
   align-items: center;
-  
 }
-
-
 
 .market-icons {
   padding-bottom: 25px;
   margin-left: 12px;
   margin-top: -10px;
   padding-right: 10px;
-  
 }
 
 .market-separate {
@@ -58,16 +52,14 @@
 }
 
 .market-info {
-  margin-left: 7px;
   margin-top: 2px;
   color: #908e8e;
   font-size: 10px;
 }
 
-.market-name,
 .market-col {
-  padding-bottom: 2px;
-  font-size: 9px;
+  display: flex;
+  font-size: 11px;
   color: #908e8e;
 }
 
@@ -78,7 +70,6 @@
 .market-change-container {
   display: flex;
   align-items: center;
- 
 }
 
 .market-change {
@@ -114,10 +105,35 @@
 
 @media (max-width: 320px) {
   .market-container {
-    width: 320px;
+    width: 280px;
     height: 210px;
     margin-top: 290px;
     margin-left: 15px;
+  }
+
+  .market-separate {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    margin-top: -29px;
+  }
+
+  .market-graph {
+    display: none;
+  }
+
+  .market-info {
+    font-size: 8px;
+  }
+
+  .market-title {
+    font-size: 11px;
+  }
+
+  .market-price {
+    font-size: 9px;
   }
 }
 
@@ -129,15 +145,13 @@
   color: #ff8d4d;
 }
 
-/* market arrrowa when change has occured */
-
 .market-change-container {
   display: flex;
   align-items: center;
 }
 
 .market-change {
-  margin-right: 9px; /* Adjust the margin as needed */
+  margin-right: 9px;
 }
 
 .green {

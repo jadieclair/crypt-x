@@ -33,7 +33,7 @@ const Nav = () => {
         <CustomButton svgIcon={<WalletIcon />} name="Wallet" />
         <CustomButton svgIcon={<MailIcon />} name="Mail Box" />
         <CustomButton svgIcon={<SettingsIcon />} name="Settings" />
-        
+
         {/* Use anchor tag for logout */}
         <li>
           <a href="/authenticate" className="logout-link">

@@ -27,7 +27,7 @@ db.connect((err) => {
 app.post("/api/register", (req, res) => {
   const { username, email, password } = req.body;
 
-  // Inserts the user into the database 
+  // Inserts the user into the database
   const sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
   db.query(sql, [username, email, password], (err, result) => {
     if (err) {
