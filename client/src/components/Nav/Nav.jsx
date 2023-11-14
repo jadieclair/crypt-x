@@ -36,7 +36,7 @@ const Nav = () => {
 
         {/* Use anchor tag for logout */}
         <li>
-          <a href="/authenticate" className="logout-link">
+          <a href="/" className="logout-link">
             <CustomButton svgIcon={<LogoutIcon />} name="Logout" />
           </a>
         </li>

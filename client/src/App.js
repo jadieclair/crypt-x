@@ -1,21 +1,20 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Authentication from "./pages/Authentication";
+import RegisterAndLogin from "./pages/RegisterAndLogin"; 
+import './pages/ForgotPassword';
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/authenticate" />} />
-          <Route path="/authenticate" element={<Authentication />} />
+          <Route path="/" element={<RegisterAndLogin />} />
           <Route path="/home" element={<Home />} />
-          {/* Add a route for successful registration redirection */}
-          <Route
-            path="/registration-success"
-            element={<Navigate to="/home" />}
-          />
-        </Routes>
+          <Route path="/forgotpassword" element={< ForgotPassword />} />
+
+         </Routes>
       </BrowserRouter>
     </div>
   );
